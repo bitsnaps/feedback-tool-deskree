@@ -3,14 +3,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ['@headlessui/vue'],
   },
-  alias: {
-    '~~': '/',
-    '@@': '/',
-    '~': '/',
-    '@': '/src',
-    assets: '/src/assets',
-    public: '/public',
-  },
   css: ['@/assets/css/main.css'],
   postcss: {
     plugins: {
@@ -18,8 +10,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  publicRuntimeConfig: {
-    PROJECT_ID: process.env.PROJECT_ID,
-    GITHUB_USERNAME: process.env.GITHUB_USERNAME,
+  runtimeConfig: {
+    public: {
+      PROJECT_ID: process.env.PROJECT_ID,
+      GITHUB_USERNAME: process.env.GITHUB_USERNAME,
+    }
   },
 });
