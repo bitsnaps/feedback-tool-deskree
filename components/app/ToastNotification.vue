@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// TODO: Add types
 </script>
 
 <template>

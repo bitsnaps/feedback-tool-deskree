@@ -46,7 +46,6 @@ async function handleTakeScreenshot(): Promise<void> {
 async function createFeedback(body: SendFeedbackBodyInterface) {
   try {
     // Create Feedback
-    // Create Feedback
     const res = await fetch(
       `https://${config.PROJECT_ID}.api.deskree.com/api/v1/rest/collections/feedbacks`,
       {
